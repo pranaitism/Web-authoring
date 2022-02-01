@@ -1,16 +1,16 @@
-@import "scss/config";
-@import "scss/variables";
-@import "scss/font";
-@import "scss/functions";
-@import "scss/colors";
-@import "scss/mixins";
-@import "scss/pages/header";
-@import "scss/pages/footer";
-@import "scss/pages/home";
-@import "scss/pages/books";
-@import "scss/pages/contactus";
-@import "scss/pages/19century";
-@import "scss/pages/delivery";
+@import 'scss/config';
+@import 'scss/variables';
+@import 'scss/font';
+@import 'scss/functions';
+@import 'scss/colors';
+@import 'scss/mixins';
+@import 'scss/pages/header';
+@import 'scss/pages/footer';
+@import 'scss/pages/home';
+@import 'scss/pages/books';
+@import 'scss/pages/contactus';
+@import 'scss/pages/19century';
+@import 'scss/pages/delivery';
 //Styling for all pages
 body {
     @include responsive-font;
@@ -44,4 +44,52 @@ h2 {
 a {
     @include bulletless-list;
     @include no-underline-link;
+}
+
+#navbar {
+    @include center-block;
+    width: decimal-width(5);
+    text-align: center;
+    ul {
+        li {
+            &:hover {
+                background: $link-hover-bg;
+                >ul {
+                    visibility: visible;
+                    opacity: 1;
+                    display: block;
+                }
+            }
+            margin: 0.2rem;
+            padding: $small-padding;
+            background-color: $menu-button-color;
+            @include block-elem;
+            a {
+                color: black;
+                display: block;
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+            ul {
+                display: none;
+                &:active {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                li {
+                    a:hover {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    @include tablet {
+        width: decimal-width(4);
+    }
+    @include desktop {
+        width: decimal-width(7);
+        margin: 0;
+    }
 }
