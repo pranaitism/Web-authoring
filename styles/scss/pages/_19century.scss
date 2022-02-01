@@ -1,0 +1,77 @@
+#booksgalerycontainer {
+    //define grid areas
+    header {
+        grid-area: header;
+    }
+    .booksgalery {
+        grid-area: booksgalery;
+    }
+    #navbar {
+        grid-area: navbar;
+    }
+    footer {
+        grid-area: footer;
+    }
+    // define subgrid areas
+    .galeryitem1 {
+        grid-area: galeryitem1;
+    }
+    .galeryitem2 {
+        grid-area: galeryitem2;
+    }
+    .galeryitem3 {
+        grid-area: galeryitem3;
+    }
+    .galeryitem4 {
+        grid-area: galeryitem4;
+    }
+    .galeryitem5 {
+        grid-area: galeryitem5;
+    }
+    .galeryitem6 {
+        grid-area: galeryitem6;
+    }
+    .galeryitem7 {
+        grid-area: galeryitem7;
+    }
+    em {
+        color: darken($color: $books-price-colour, $amount: 30%)
+    }
+    p {
+        margin-top: $medium-margin;
+        width: decimal-width(8);
+    }
+    // darken pictures
+    figure {
+        @include img-darken;
+        text-align: left;
+    }
+    // media queries
+    @include mobile {
+        @include single-column-grid;
+        grid-template-areas: "header""booksgalery""navbar""footer";
+        grid-gap: $medium-gridgap;
+    }
+    .booksgalery {
+        @include single-column-grid;
+        grid-template-areas: "galeryitem1""galeryitem2""galeryitem3""galeryitem4""galeryitem5""galeryitem6""galeryitem7";
+        grid-gap: $medium-gridgap;
+    }
+    @include tablet {
+        @include two-column-grid;
+        grid-template-areas: "header header""booksgalery booksgalery""navbar navbar""footer footer";
+        grid-gap: $medium-gridgap;
+        .booksgalery {
+            @include two-column-grid;
+            grid-template-areas: "galeryitem1 galeryitem1""galeryitem2 galeryitem3""galeryitem4 galeryitem5""galeryitem6 galeryitem7";
+        }
+    }
+    @include desktop {
+        @include three-column-grid;
+        grid-template-areas: "header header header""navbar booksgalery booksgalery""footer footer footer";
+        .booksgalery {
+            @include three-column-grid;
+            grid-template-areas: "galeryitem1 galeryitem1 galeryitem1" "galeryitem2 galeryitem3 galeryitem4" "galeryitem5 galeryitem6 galeryitem7";
+        }
+    }
+}

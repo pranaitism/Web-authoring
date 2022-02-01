@@ -1,0 +1,317 @@
+    @mixin position-top-right {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    
+    header {
+        ul {
+            white-space: nowrap;
+            @include bulletless-list;
+            li {
+                display: inline-block;
+                padding: $small-padding;
+                a {
+                    color: $brand-color;
+                }
+            }
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            height: 1%;
+        }
+        margin-top: $large-margin;
+        h2 {
+            font-family: Parisian;
+            font-weight: 300;
+            font-size: large;
+        }
+        #header-logo {
+            background-image: url("/images/Logo/emblem_logo_96.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .logo-text {
+            position: absolute;
+            top: 40px;
+            left: 110px;
+            white-space: nowrap;
+        }
+        // Navigation styling
+        // nav {
+        //     position: relative;
+        //     top: -60px;
+        //     right: -5px;
+        //     ul {
+        //         background: $brand-color;
+        //         list-style: none;
+        //         margin: 0;
+        //         padding-left: 0;
+        //         li {
+        //             color: #fff;
+        //             background: $brand-color;
+        //             display: block;
+        //             float: left;
+        //             padding: 1rem;
+        //             position: relative;
+        //             text-decoration: none;
+        //             transition-duration: 0.5s;
+        //             &:hover,
+        //              :focus-within {
+        //                 background: $border-colour;
+        //                 cursor: pointer;
+        //             }
+        //             &:hover,
+        //              :focus-within {
+        //                 visibility: visible;
+        //                 opacity: 1;
+        //                 display: block;
+        //             }
+        //             a {
+        //                 color: white;
+        //             }
+        //         }
+        //         ul {
+        //             background: $brand-color;
+        //             visibility: hidden;
+        //             opacity: 0;
+        //             min-width: 20rem;
+        //             position: absolute;
+        //             transition: all 0.5s ease;
+        //             margin-top: 2rem;
+        //             left: 0;
+        //             display: none;
+        //             &:hover,
+        //              :focus {
+        //                 visibility: visible;
+        //                 opacity: 1;
+        //                 display: block;
+        //             }
+        //             li {
+        //                 clear: both;
+        //                 width: 100%;
+        //                 &:focus-within a {
+        //                     outline: none;
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     @include tablet {
+        //         width: decimal-width(4);
+        //     }
+        //     @include desktop {
+        //         width: decimal-width(7);
+        //         margin: 0;
+        //     }
+        // }
+        nav {
+            //     ul {
+            //         list-style: none;
+            //         margin: 0;
+            //         padding-left: 0;
+            //         li {
+            //             ul {
+            //                 visibility: hidden;
+            //                 opacity: 0;
+            //                 min-width: 12rem;
+            //                 position: absolute;
+            //                 transition: all 0.5s ease;
+            //                 margin-top: 3.2rem;
+            //                 left: 0;
+            //                 display: none;
+            //                 &:hover {
+            //                     visibility: visible;
+            //                     opacity: 1;
+            //                     display: block;
+            //                 }
+            //                 &:focus {
+            //                     visibility: visible;
+            //                     opacity: 1;
+            //                     display: block;
+            //                 }
+            //                 li {
+            //                     clear: both;
+            //                     width: 100%;
+            //                 }
+            //             }
+            //             &:hover {
+            //                 >ul {
+            //                     visibility: visible;
+            //                     opacity: 1;
+            //                     display: block;
+            //                 }
+            //             }
+            //             &:focus-within {
+            //                 >ul {
+            //                     visibility: visible;
+            //                     opacity: 1;
+            //                     display: block;
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     li {
+            //         color: #fff;
+            //         background: $brand-color;
+            //         display: block;
+            //         float: left;
+            //         padding: 1rem;
+            //         position: relative;
+            //         text-decoration: none;
+            //         transition-duration: 0.5s;
+            //         a {
+            //             color: #fff;
+            //         }
+            //         &:hover {
+            //             background: #4d4637;
+            //             cursor: pointer;
+            //         }
+            //         &:focus-within {
+            //             background: $border-colour;
+            //             cursor: pointer;
+            //             a {
+            //                 outline: none;
+            //             }
+            //         }
+            //     }
+            //     // @include tablet {
+            //     //     display: none;
+            //     // }
+            // }
+            // //menu button
+            // #menubutton {
+            //     position: absolute;
+            //     top: 45px;
+            //     right: 20px;
+            //     @include bulletless-list;
+            //     @include no-underline-link;
+            //     @include center-text;
+            //     color: black;
+            //     background-color: $menu-button-color;
+            //     border: 1px solid black;
+            //     border-radius: 0.2rem;
+            //     padding: 0.5rem;
+            //     a:hover {
+            //         background: $link-hover-bg;
+            //     }
+            //     @include desktop {
+            //         display: none;
+            //     }
+            // }
+            // // skiplink
+            //  :focus {
+            //     outline: 3px dotted brown;
+            // }
+            // .skip-link {
+            //     position: absolute;
+            //     left: -10000px;
+            // }
+            // .skip-link:focus {
+            //     left: 10px;
+            //     top: 10px;
+            //     background-color: $background-color;
+            // }
+            #menuToggle {
+                display: block;
+                position: relative;
+                top: 50px;
+                left: 50px;
+                z-index: 1;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            #menuToggle a {
+                text-decoration: none;
+                color: #232323;
+                transition: color 0.3s ease;
+            }
+            #menuToggle a:hover {
+                color: tomato;
+            }
+            #menuToggle input {
+                display: block;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                top: -7px;
+                left: -5px;
+                cursor: pointer;
+                opacity: 0;
+                /* hide this */
+                z-index: 2;
+                /* and place it over the hamburger */
+                -webkit-touch-callout: none;
+            }
+            /*
+ * Just a quick hamburger
+ */
+            #menuToggle span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                margin-bottom: 5px;
+                position: relative;
+                background: #cdcdcd;
+                border-radius: 3px;
+                z-index: 1;
+                transform-origin: 4px 0px;
+                transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+            }
+            #menuToggle span:first-child {
+                transform-origin: 0% 0%;
+            }
+            #menuToggle span:nth-last-child(2) {
+                transform-origin: 0% 100%;
+            }
+            /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+            #menuToggle input:checked~span {
+                opacity: 1;
+                transform: rotate(45deg) translate(-2px, -1px);
+                background: #232323;
+            }
+            /*
+ * But let's hide the middle one.
+ */
+            #menuToggle input:checked~span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            /*
+ * Ohyeah and the last one should go the other direction
+ */
+            #menuToggle input:checked~span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(0, -1px);
+            }
+            /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+            #menu {
+                position: absolute;
+                width: 300px;
+                margin: -100px 0 0 -50px;
+                padding: 50px;
+                padding-top: 125px;
+                background: #ededed;
+                list-style-type: none;
+                -webkit-font-smoothing: antialiased;
+                /* to stop flickering of text in safari */
+                transform-origin: 0% 0%;
+                transform: translate(-100%, 0);
+                transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            }
+            #menu li {
+                padding: 10px 0;
+                font-size: 22px;
+            }
+            /*
+ * And let's slide it in from the left
+ */
+            #menuToggle input:checked~ul {
+                transform: none;
+            }
+        }
+    }

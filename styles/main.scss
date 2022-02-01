@@ -1,0 +1,47 @@
+@import "scss/config";
+@import "scss/variables";
+@import "scss/font";
+@import "scss/functions";
+@import "scss/colors";
+@import "scss/mixins";
+@import "scss/pages/header";
+@import "scss/pages/footer";
+@import "scss/pages/home";
+@import "scss/pages/books";
+@import "scss/pages/contactus";
+@import "scss/pages/19century";
+@import "scss/pages/delivery";
+//Styling for all pages
+body {
+    @include responsive-font;
+    @include responsive-line-height;
+    font-family: $base-font;
+    background-color: $background-color;
+    color: $font-color;
+    @include mobile {
+        .main-picture {
+            display: none;
+        }
+    }
+}
+
+main {
+    padding: $large-padding;
+    margin-top: $large-margin;
+}
+
+h1 {
+    font-weight: lighter;
+    font-family: Parisian;
+}
+
+h2 {
+    font-family: Parisian;
+    text-decoration: underline;
+    text-decoration-color: $brand-color;
+}
+
+a {
+    @include bulletless-list;
+    @include no-underline-link;
+}
