@@ -11,7 +11,8 @@ Constrains:
 No Javascript or any its framework.
 Use of CSS Grid
 Use of SCSS
-
+Mobile first
+Responsive
 
 
 Link http://mindaugaspranaitis.net
